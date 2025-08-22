@@ -1,0 +1,23 @@
+{
+  "title": "H5PEditor.SelectButtons",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 0,
+  "machineName": "H5PEditor.SelectButtons",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 27
+  },
+  "author": "NDLA, Oliver Tacke",
+  "preloadedJs": [
+    {
+      "path": "dist/h5peditor-select-buttons.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "dist/h5peditor-select-buttons.css"
+    }
+  ]
+}

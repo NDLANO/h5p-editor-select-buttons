@@ -1,0 +1,102 @@
+.h5peditor-select-buttons {
+  .field.selectButtons {
+    .h5peditor-select-buttons-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      .h5peditor-select-button {
+        border-radius: .25rem;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 2.625rem;
+        padding: 0 1.25rem;
+
+        &:not(.selected) {
+          background: hsl(0, 0%, 96%);
+          background-image: linear-gradient(hsl(0, 0%, 93%) 50%, transparent 50%, transparent);
+          border: 1px solid hsl(0, 0%, 80%);
+          color: #212121;
+        }
+
+        &.selected {
+          color: hsl(0, 0%, 100%);
+        }
+
+        &:not([disabled]) {
+          cursor: pointer;
+
+          &:hover{
+            color: hsl(0, 0%, 100%);
+          }
+        }
+
+        &[disabled] {
+          background: hsl(0, 0%, 96%);
+          border: 1px solid hsl(0, 0%, 93%);
+          color: hsl(180, 0%, 44%);
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &.importance-low {
+      .h5peditor-select-button {
+        &.selected {
+          background: hsl(270, 1%, 55%);
+          background-image: linear-gradient(hsl(280, 0%, 52%) 50%, transparent 50%, transparent);
+          border: 1px solid hsl(280, 2%, 49%);
+
+        }
+
+        &:not([disabled]) {
+          &:hover{
+            background: hsl(279, 1%, 48%);
+            background-image: linear-gradient(hsl(279, 1%, 48%) 50%, transparent 50%, transparent);
+            border-color: hsl(279, 1%, 48%);
+          }
+        }
+      }
+    }
+
+    &.importance-medium {
+      .h5peditor-select-button {
+        &.selected {
+          background: hsl(280, 1%, 45%);
+          background-image: linear-gradient(hsl(280, 0%, 42%) 50%, transparent 50%, transparent);
+          border: 1px solid hsl(280, 2%, 39%);
+
+        }
+
+        &:not([disabled]) {
+          &:hover{
+            background: hsl(279, 1%, 38%);
+            background-image: linear-gradient(hsl(279, 1%, 38%) 50%, transparent 50%, transparent);
+            border-color: hsl(279, 1%, 38%);
+          }
+        }
+      }
+    }
+
+    &.importance-high {
+      .h5peditor-select-button {
+        &.selected {
+          background: hsl(209, 69%, 46%);
+          background-image: linear-gradient(hsl(209, 61%, 49%) 50%, transparent 50%, transparent);
+          border: 1px solid hsl(208, 69%, 39%);
+        }
+
+        &:not([disabled]) {
+          &:hover{
+            background: hsl(208, 69%, 39%);
+            background-image: linear-gradient(hsl(208, 61%, 42%) 50%, transparent 50%, transparent);
+            border-color: hsl(208, 69%, 39%);
+          }
+        }
+      }
+    }
+  }
+}
