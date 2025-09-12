@@ -33,6 +33,8 @@ export default class SelectButtons {
 
     // Instantiate original field (or create your own and call setValue)
     this.fieldInstance = new H5PEditor.widgets[this.field.type](this.parent, this.field, this.params, this.setValue);
+    this.value = this.fieldInstance.value;
+
     this.fieldInstance.appendTo(this.$container);
 
     // Relay changes
@@ -96,6 +98,7 @@ export default class SelectButtons {
 
       if (button === buttonClicked) {
         const value = this.field.options.find((opt) => opt.label === button.innerText).value;
+        this.value = value;
         this.fieldInstance.$select.get(0).value = value;
         this.fieldInstance.$select.get(0).dispatchEvent(new Event('change'));
       }
